@@ -2,6 +2,7 @@ package app;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.web.socket.BinaryMessage;
+import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
 
@@ -58,6 +59,12 @@ public class MainHandler extends TextWebSocketHandler {
     }
 
     return false;
+  }
+
+  @Override
+  protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
+    Thread.sleep(1000);
+    session.sendMessage(new TextMessage(new String(message.asBytes()) + "Hello From Server"));
   }
 
   private void handleCallRequest(CallRequest callRequest, WebSocketSession session) {

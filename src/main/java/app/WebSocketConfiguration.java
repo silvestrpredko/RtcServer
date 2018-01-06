@@ -14,6 +14,6 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
 
   @Override
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(new MainHandler(), "/");
+    registry.addHandler(new MainHandler(), "webrtc");
   }
 }
