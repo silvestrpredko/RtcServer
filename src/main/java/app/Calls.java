@@ -1,7 +1,5 @@
 package app;
 
-import jdk.internal.jline.internal.Nullable;
-
 import javax.validation.constraints.NotNull;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -32,7 +30,6 @@ public class Calls {
     callsMap.clear();
   }
 
-  @Nullable
   public Call getCall(String callId) {
     return callsMap.get(callId);
   }
