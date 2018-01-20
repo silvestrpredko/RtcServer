@@ -80,6 +80,8 @@ public class MainHandler extends TextWebSocketHandler {
         MainHandler::clientNotRespond
     );
 
+    System.out.println("Handle Call Request");
+
     if (call != null) {
       call.getCallMembers().forEach((item) -> {
         item.cancelWaiting();
@@ -104,6 +106,8 @@ public class MainHandler extends TextWebSocketHandler {
     }
 
     call.getCallMembers().forEach(CallMember::cancelWaiting);
+
+    System.out.println("Handle Peer");
 
     call.addCallMember(new CallMember(session, peer.getLocalClientId(), peer.getCallId()));
     call.getCallMembers()
@@ -134,6 +138,8 @@ public class MainHandler extends TextWebSocketHandler {
     if (call == null) {
       return;
     }
+
+    System.out.println("Handle Offer");
 
     CallMember member = call.getCallMembers()
         .stream()
