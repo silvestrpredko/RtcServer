@@ -2,6 +2,7 @@ package app;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 import org.springframework.web.socket.BinaryMessage;
+import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
@@ -28,6 +29,11 @@ public class MainHandler extends TextWebSocketHandler {
     }
   }
 
+  @Override
+  public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+
+  }
+
   private Boolean handleMessage(BinaryMessage message, WebSocketSession session) throws InvalidProtocolBufferException {
     final MessageContainer messageContainer = MessageContainer.parseFrom(message.getPayload());
     switch (messageContainer.getMessageType()) {
@@ -48,12 +54,8 @@ public class MainHandler extends TextWebSocketHandler {
         }
         return true;
       }
-      case IceCandidate: {
-
-        return true;
-      }
       case IceServers: {
-
+        handleIceServers(IceServers.parseFrom(message.getPayload()));
         return true;
       }
     }
@@ -91,7 +93,7 @@ public class MainHandler extends TextWebSocketHandler {
     newCall.addCallMember(creator);
     calls.addCall(newCall, callRequest.getCallId());
 
-    timer.schedule(creator.getConnectionTimerTask(), TimeUnit.SECONDS.toMillis(10));
+    timer.schedule(creator.getConnectionTimerTask(), TimeUnit.SECONDS.toMillis(20));
   }
 
   private void handlePeer(Peer peer, WebSocketSession session) {
@@ -101,11 +103,29 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
+    call.getCallMembers().forEach(CallMember::cancelWaiting);
+
     call.addCallMember(new CallMember(session, peer.getLocalClientId(), peer.getCallId()));
     call.getCallMembers()
         .stream()
         .filter(callMember -> !callMember.getClientId().equals(peer.getLocalClientId()))
         .forEach(callMember -> sendPeer(callMember.getSession(), peer));
+  }
+
+  private void handleIceServers(IceServers iceServers) {
+    final Call call = Calls.getInstance().getCall(iceServers.getCallId());
+
+    if (call == null) {
+      return;
+    }
+
+    CallMember member = call.getCallMembers()
+        .stream()
+        .filter(callMember -> callMember.getClientId().equals(iceServers.getRemoteClientId()))
+        .findFirst()
+        .orElseThrow(() -> new RuntimeException("No Peer By this Id"));
+
+    sendIceServers(member.getSession(), iceServers);
   }
 
   private void handleOffer(Session offer) {
@@ -138,6 +158,14 @@ public class MainHandler extends TextWebSocketHandler {
         .orElseThrow(() -> new RuntimeException("No Peer By this Id"));
 
     sendAnswer(member.getSession(), answer);
+  }
+
+  public static void sendIceServers(WebSocketSession session, IceServers iceServers) {
+    try {
+      session.sendMessage(MessageBuilder.wrapIceServers(iceServers));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 
   public static void sendPeer(WebSocketSession session, Peer peer) {

@@ -65,4 +65,14 @@ public class MessageBuilder {
             .toByteArray()
     );
   }
+
+  public static BinaryMessage wrapIceServers(IceServers iceServers) {
+    return new BinaryMessage(
+        MessageContainer.newBuilder()
+            .setMessageType(MessageContainer.MessageType.IceServers)
+            .setMessage(iceServers.toByteString())
+            .build()
+            .toByteArray()
+    );
+  }
 }
