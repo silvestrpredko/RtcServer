@@ -38,15 +38,15 @@ public class MainHandler extends TextWebSocketHandler {
     final MessageContainer messageContainer = MessageContainer.parseFrom(message.getPayload());
     switch (messageContainer.getMessageType()) {
       case CallRequest: {
-        handleCallRequest(CallRequest.parseFrom(message.getPayload()), session);
+        handleCallRequest(CallRequest.parseFrom(messageContainer.getMessage()), session);
         return true;
       }
       case Peer: {
-        handlePeer(Peer.parseFrom(message.getPayload()), session);
+        handlePeer(Peer.parseFrom(messageContainer.getMessage()), session);
         return true;
       }
       case Session: {
-        final Session rtcSession = Session.parseFrom(message.getPayload());
+        final Session rtcSession = Session.parseFrom(messageContainer.getMessage());
         if (rtcSession.getSessionType() == Session.Type.ANSWER) {
           handleAnswer(rtcSession);
         } else {
@@ -55,7 +55,7 @@ public class MainHandler extends TextWebSocketHandler {
         return true;
       }
       case IceServers: {
-        handleIceServers(IceServers.parseFrom(message.getPayload()));
+        handleIceServers(IceServers.parseFrom(messageContainer.getMessage()));
         return true;
       }
     }
