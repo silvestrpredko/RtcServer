@@ -123,6 +123,8 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
+    System.out.println("Handle Ice Servers");
+
     CallMember member = call.getCallMembers()
         .stream()
         .filter(callMember -> callMember.getClientId().equals(iceServers.getRemoteClientId()))
