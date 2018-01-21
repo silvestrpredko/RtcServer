@@ -176,6 +176,7 @@ public class MainHandler extends TextWebSocketHandler {
 
   public static void sendPeer(WebSocketSession session, Peer peer) {
     try {
+      System.out.println("Send Peer" + peer.getLocalClientId());
       session.sendMessage(MessageBuilder.wrapPeer(peer));
     } catch (IOException e) {
       e.printStackTrace();
