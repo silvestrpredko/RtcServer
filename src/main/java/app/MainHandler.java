@@ -157,6 +157,8 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
+    System.out.println("Handle Answer");
+
     CallMember member = call.getCallMembers()
         .stream()
         .filter(callMember -> callMember.getClientId().equals(answer.getRemoteClientId()))
