@@ -25,7 +25,7 @@ public final class Proto {
     /**
      * <code>.proto.MessageContainer.MessageType message_type = 1;</code>
      */
-    proto.Proto.MessageContainer.MessageType getMessageType();
+    MessageContainer.MessageType getMessageType();
 
     /**
      * <code>bytes message = 2;</code>
@@ -49,7 +49,7 @@ public final class Proto {
       message_ = com.google.protobuf.ByteString.EMPTY;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -60,7 +60,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -105,14 +105,14 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_MessageContainer_descriptor;
+      return Proto.internal_static_proto_MessageContainer_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_MessageContainer_fieldAccessorTable
+      return Proto.internal_static_proto_MessageContainer_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.MessageContainer.class, proto.Proto.MessageContainer.Builder.class);
+              MessageContainer.class, Builder.class);
     }
 
     /**
@@ -175,7 +175,7 @@ public final class Proto {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -184,7 +184,7 @@ public final class Proto {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static MessageType valueOf(int value) {
         return forNumber(value);
       }
@@ -223,7 +223,7 @@ public final class Proto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return proto.Proto.MessageContainer.getDescriptor().getEnumTypes().get(0);
+        return MessageContainer.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final MessageType[] VALUES = values();
@@ -231,7 +231,7 @@ public final class Proto {
       public static MessageType valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -260,9 +260,9 @@ public final class Proto {
     /**
      * <code>.proto.MessageContainer.MessageType message_type = 1;</code>
      */
-    public proto.Proto.MessageContainer.MessageType getMessageType() {
-      proto.Proto.MessageContainer.MessageType result = proto.Proto.MessageContainer.MessageType.valueOf(messageType_);
-      return result == null ? proto.Proto.MessageContainer.MessageType.UNRECOGNIZED : result;
+    public MessageType getMessageType() {
+      MessageType result = MessageType.valueOf(messageType_);
+      return result == null ? MessageType.UNRECOGNIZED : result;
     }
 
     public static final int MESSAGE_FIELD_NUMBER = 2;
@@ -286,7 +286,7 @@ public final class Proto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (messageType_ != proto.Proto.MessageContainer.MessageType.CallRequest.getNumber()) {
+      if (messageType_ != MessageType.CallRequest.getNumber()) {
         output.writeEnum(1, messageType_);
       }
       if (!message_.isEmpty()) {
@@ -300,7 +300,7 @@ public final class Proto {
       if (size != -1) return size;
 
       size = 0;
-      if (messageType_ != proto.Proto.MessageContainer.MessageType.CallRequest.getNumber()) {
+      if (messageType_ != MessageType.CallRequest.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, messageType_);
       }
@@ -313,15 +313,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.MessageContainer)) {
+      if (!(obj instanceof MessageContainer)) {
         return super.equals(obj);
       }
-      proto.Proto.MessageContainer other = (proto.Proto.MessageContainer) obj;
+      MessageContainer other = (MessageContainer) obj;
 
       boolean result = true;
       result = result && messageType_ == other.messageType_;
@@ -331,7 +331,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -347,69 +347,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.MessageContainer parseFrom(byte[] data)
+    public static MessageContainer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.MessageContainer parseFrom(java.io.InputStream input)
+    public static MessageContainer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.MessageContainer parseDelimitedFrom(java.io.InputStream input)
+    public static MessageContainer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.MessageContainer parseDelimitedFrom(
+    public static MessageContainer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.MessageContainer parseFrom(
+    public static MessageContainer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -421,7 +421,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.MessageContainer prototype) {
+    public static Builder newBuilder(MessageContainer prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -429,9 +429,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -441,17 +441,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.MessageContainer)
-        proto.Proto.MessageContainerOrBuilder {
+        MessageContainerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_MessageContainer_descriptor;
+        return Proto.internal_static_proto_MessageContainer_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_MessageContainer_fieldAccessorTable
+        return Proto.internal_static_proto_MessageContainer_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.MessageContainer.class, proto.Proto.MessageContainer.Builder.class);
+                MessageContainer.class, Builder.class);
       }
 
       // Construct using proto.Proto.MessageContainer.newBuilder()
@@ -460,7 +460,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -480,23 +480,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_MessageContainer_descriptor;
+        return Proto.internal_static_proto_MessageContainer_descriptor;
       }
 
-      public proto.Proto.MessageContainer getDefaultInstanceForType() {
-        return proto.Proto.MessageContainer.getDefaultInstance();
+      public MessageContainer getDefaultInstanceForType() {
+        return MessageContainer.getDefaultInstance();
       }
 
-      public proto.Proto.MessageContainer build() {
-        proto.Proto.MessageContainer result = buildPartial();
+      public MessageContainer build() {
+        MessageContainer result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.MessageContainer buildPartial() {
-        proto.Proto.MessageContainer result = new proto.Proto.MessageContainer(this);
+      public MessageContainer buildPartial() {
+        MessageContainer result = new MessageContainer(this);
         result.messageType_ = messageType_;
         result.message_ = message_;
         onBuilt();
@@ -508,7 +508,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -521,25 +521,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.MessageContainer) {
-          return mergeFrom((proto.Proto.MessageContainer)other);
+        if (other instanceof MessageContainer) {
+          return mergeFrom((MessageContainer)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.MessageContainer other) {
-        if (other == proto.Proto.MessageContainer.getDefaultInstance()) return this;
+      public Builder mergeFrom(MessageContainer other) {
+        if (other == MessageContainer.getDefaultInstance()) return this;
         if (other.messageType_ != 0) {
           setMessageTypeValue(other.getMessageTypeValue());
         }
@@ -559,11 +559,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.MessageContainer parsedMessage = null;
+        MessageContainer parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.MessageContainer) e.getUnfinishedMessage();
+          parsedMessage = (MessageContainer) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -591,14 +591,14 @@ public final class Proto {
       /**
        * <code>.proto.MessageContainer.MessageType message_type = 1;</code>
        */
-      public proto.Proto.MessageContainer.MessageType getMessageType() {
-        proto.Proto.MessageContainer.MessageType result = proto.Proto.MessageContainer.MessageType.valueOf(messageType_);
-        return result == null ? proto.Proto.MessageContainer.MessageType.UNRECOGNIZED : result;
+      public MessageType getMessageType() {
+        MessageType result = MessageType.valueOf(messageType_);
+        return result == null ? MessageType.UNRECOGNIZED : result;
       }
       /**
        * <code>.proto.MessageContainer.MessageType message_type = 1;</code>
        */
-      public Builder setMessageType(proto.Proto.MessageContainer.MessageType value) {
+      public Builder setMessageType(MessageType value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -660,12 +660,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.MessageContainer)
-    private static final proto.Proto.MessageContainer DEFAULT_INSTANCE;
+    private static final MessageContainer DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.MessageContainer();
+      DEFAULT_INSTANCE = new MessageContainer();
     }
 
-    public static proto.Proto.MessageContainer getDefaultInstance() {
+    public static MessageContainer getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -683,12 +683,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<MessageContainer> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.MessageContainer getDefaultInstanceForType() {
+    public MessageContainer getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -701,7 +701,7 @@ public final class Proto {
     /**
      * <code>string call_id = 1;</code>
      */
-    java.lang.String getCallId();
+    String getCallId();
     /**
      * <code>string call_id = 1;</code>
      */
@@ -711,7 +711,7 @@ public final class Proto {
     /**
      * <code>string call_message = 2;</code>
      */
-    java.lang.String getCallMessage();
+    String getCallMessage();
     /**
      * <code>string call_message = 2;</code>
      */
@@ -721,7 +721,7 @@ public final class Proto {
     /**
      * <code>string local_client_id = 3;</code>
      */
-    java.lang.String getLocalClientId();
+    String getLocalClientId();
     /**
      * <code>string local_client_id = 3;</code>
      */
@@ -746,7 +746,7 @@ public final class Proto {
       localClientId_ = "";
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -757,7 +757,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -778,19 +778,19 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callMessage_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               localClientId_ = s;
               break;
@@ -809,29 +809,29 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_CallRequest_descriptor;
+      return Proto.internal_static_proto_CallRequest_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_CallRequest_fieldAccessorTable
+      return Proto.internal_static_proto_CallRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.CallRequest.class, proto.Proto.CallRequest.Builder.class);
+              CallRequest.class, Builder.class);
     }
 
     public static final int CALL_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object callId_;
+    private volatile Object callId_;
     /**
      * <code>string call_id = 1;</code>
      */
-    public java.lang.String getCallId() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallId() {
+      Object ref = callId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callId_ = s;
         return s;
       }
@@ -841,11 +841,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallIdBytes() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callId_ = b;
         return b;
       } else {
@@ -854,18 +854,18 @@ public final class Proto {
     }
 
     public static final int CALL_MESSAGE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object callMessage_;
+    private volatile Object callMessage_;
     /**
      * <code>string call_message = 2;</code>
      */
-    public java.lang.String getCallMessage() {
-      java.lang.Object ref = callMessage_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallMessage() {
+      Object ref = callMessage_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callMessage_ = s;
         return s;
       }
@@ -875,11 +875,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallMessageBytes() {
-      java.lang.Object ref = callMessage_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callMessage_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callMessage_ = b;
         return b;
       } else {
@@ -888,18 +888,18 @@ public final class Proto {
     }
 
     public static final int LOCAL_CLIENT_ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object localClientId_;
+    private volatile Object localClientId_;
     /**
      * <code>string local_client_id = 3;</code>
      */
-    public java.lang.String getLocalClientId() {
-      java.lang.Object ref = localClientId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getLocalClientId() {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         localClientId_ = s;
         return s;
       }
@@ -909,11 +909,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getLocalClientIdBytes() {
-      java.lang.Object ref = localClientId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         localClientId_ = b;
         return b;
       } else {
@@ -964,15 +964,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.CallRequest)) {
+      if (!(obj instanceof CallRequest)) {
         return super.equals(obj);
       }
-      proto.Proto.CallRequest other = (proto.Proto.CallRequest) obj;
+      CallRequest other = (CallRequest) obj;
 
       boolean result = true;
       result = result && getCallId()
@@ -985,7 +985,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1003,69 +1003,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequest parseFrom(byte[] data)
+    public static CallRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequest parseFrom(java.io.InputStream input)
+    public static CallRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.CallRequest parseDelimitedFrom(java.io.InputStream input)
+    public static CallRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequest parseDelimitedFrom(
+    public static CallRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequest parseFrom(
+    public static CallRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1077,7 +1077,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.CallRequest prototype) {
+    public static Builder newBuilder(CallRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1085,9 +1085,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1097,17 +1097,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CallRequest)
-        proto.Proto.CallRequestOrBuilder {
+        CallRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_CallRequest_descriptor;
+        return Proto.internal_static_proto_CallRequest_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_CallRequest_fieldAccessorTable
+        return Proto.internal_static_proto_CallRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.CallRequest.class, proto.Proto.CallRequest.Builder.class);
+                CallRequest.class, Builder.class);
       }
 
       // Construct using proto.Proto.CallRequest.newBuilder()
@@ -1116,7 +1116,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1138,23 +1138,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_CallRequest_descriptor;
+        return Proto.internal_static_proto_CallRequest_descriptor;
       }
 
-      public proto.Proto.CallRequest getDefaultInstanceForType() {
-        return proto.Proto.CallRequest.getDefaultInstance();
+      public CallRequest getDefaultInstanceForType() {
+        return CallRequest.getDefaultInstance();
       }
 
-      public proto.Proto.CallRequest build() {
-        proto.Proto.CallRequest result = buildPartial();
+      public CallRequest build() {
+        CallRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.CallRequest buildPartial() {
-        proto.Proto.CallRequest result = new proto.Proto.CallRequest(this);
+      public CallRequest buildPartial() {
+        CallRequest result = new CallRequest(this);
         result.callId_ = callId_;
         result.callMessage_ = callMessage_;
         result.localClientId_ = localClientId_;
@@ -1167,7 +1167,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1180,25 +1180,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.CallRequest) {
-          return mergeFrom((proto.Proto.CallRequest)other);
+        if (other instanceof CallRequest) {
+          return mergeFrom((CallRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.CallRequest other) {
-        if (other == proto.Proto.CallRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(CallRequest other) {
+        if (other == CallRequest.getDefaultInstance()) return this;
         if (!other.getCallId().isEmpty()) {
           callId_ = other.callId_;
           onChanged();
@@ -1224,11 +1224,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.CallRequest parsedMessage = null;
+        CallRequest parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.CallRequest) e.getUnfinishedMessage();
+          parsedMessage = (CallRequest) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1238,20 +1238,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callId_ = "";
+      private Object callId_ = "";
       /**
        * <code>string call_id = 1;</code>
        */
-      public java.lang.String getCallId() {
-        java.lang.Object ref = callId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallId() {
+        Object ref = callId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1259,11 +1259,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallIdBytes() {
-        java.lang.Object ref = callId_;
+        Object ref = callId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callId_ = b;
           return b;
         } else {
@@ -1274,7 +1274,7 @@ public final class Proto {
        * <code>string call_id = 1;</code>
        */
       public Builder setCallId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1307,20 +1307,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callMessage_ = "";
+      private Object callMessage_ = "";
       /**
        * <code>string call_message = 2;</code>
        */
-      public java.lang.String getCallMessage() {
-        java.lang.Object ref = callMessage_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallMessage() {
+        Object ref = callMessage_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callMessage_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1328,11 +1328,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallMessageBytes() {
-        java.lang.Object ref = callMessage_;
+        Object ref = callMessage_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callMessage_ = b;
           return b;
         } else {
@@ -1343,7 +1343,7 @@ public final class Proto {
        * <code>string call_message = 2;</code>
        */
       public Builder setCallMessage(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1376,20 +1376,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object localClientId_ = "";
+      private Object localClientId_ = "";
       /**
        * <code>string local_client_id = 3;</code>
        */
-      public java.lang.String getLocalClientId() {
-        java.lang.Object ref = localClientId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalClientId() {
+        Object ref = localClientId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           localClientId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1397,11 +1397,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getLocalClientIdBytes() {
-        java.lang.Object ref = localClientId_;
+        Object ref = localClientId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           localClientId_ = b;
           return b;
         } else {
@@ -1412,7 +1412,7 @@ public final class Proto {
        * <code>string local_client_id = 3;</code>
        */
       public Builder setLocalClientId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1459,12 +1459,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CallRequest)
-    private static final proto.Proto.CallRequest DEFAULT_INSTANCE;
+    private static final CallRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.CallRequest();
+      DEFAULT_INSTANCE = new CallRequest();
     }
 
-    public static proto.Proto.CallRequest getDefaultInstance() {
+    public static CallRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1482,12 +1482,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<CallRequest> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.CallRequest getDefaultInstanceForType() {
+    public CallRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1500,7 +1500,7 @@ public final class Proto {
     /**
      * <code>string call_id = 1;</code>
      */
-    java.lang.String getCallId();
+    String getCallId();
     /**
      * <code>string call_id = 1;</code>
      */
@@ -1514,7 +1514,7 @@ public final class Proto {
     /**
      * <code>.proto.CallRequestError.ResponseStatus status = 2;</code>
      */
-    proto.Proto.CallRequestError.ResponseStatus getStatus();
+    CallRequestError.ResponseStatus getStatus();
   }
   /**
    * Protobuf type {@code proto.CallRequestError}
@@ -1533,7 +1533,7 @@ public final class Proto {
       status_ = 0;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1544,7 +1544,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -1565,7 +1565,7 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callId_ = s;
               break;
@@ -1590,14 +1590,14 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_CallRequestError_descriptor;
+      return Proto.internal_static_proto_CallRequestError_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_CallRequestError_fieldAccessorTable
+      return Proto.internal_static_proto_CallRequestError_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.CallRequestError.class, proto.Proto.CallRequestError.Builder.class);
+              CallRequestError.class, Builder.class);
     }
 
     /**
@@ -1628,7 +1628,7 @@ public final class Proto {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -1637,7 +1637,7 @@ public final class Proto {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static ResponseStatus valueOf(int value) {
         return forNumber(value);
       }
@@ -1672,7 +1672,7 @@ public final class Proto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return proto.Proto.CallRequestError.getDescriptor().getEnumTypes().get(0);
+        return CallRequestError.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final ResponseStatus[] VALUES = values();
@@ -1680,7 +1680,7 @@ public final class Proto {
       public static ResponseStatus valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -1699,18 +1699,18 @@ public final class Proto {
     }
 
     public static final int CALL_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object callId_;
+    private volatile Object callId_;
     /**
      * <code>string call_id = 1;</code>
      */
-    public java.lang.String getCallId() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallId() {
+      Object ref = callId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callId_ = s;
         return s;
       }
@@ -1720,11 +1720,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallIdBytes() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callId_ = b;
         return b;
       } else {
@@ -1743,9 +1743,9 @@ public final class Proto {
     /**
      * <code>.proto.CallRequestError.ResponseStatus status = 2;</code>
      */
-    public proto.Proto.CallRequestError.ResponseStatus getStatus() {
-      proto.Proto.CallRequestError.ResponseStatus result = proto.Proto.CallRequestError.ResponseStatus.valueOf(status_);
-      return result == null ? proto.Proto.CallRequestError.ResponseStatus.UNRECOGNIZED : result;
+    public ResponseStatus getStatus() {
+      ResponseStatus result = ResponseStatus.valueOf(status_);
+      return result == null ? ResponseStatus.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1763,7 +1763,7 @@ public final class Proto {
       if (!getCallIdBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, callId_);
       }
-      if (status_ != proto.Proto.CallRequestError.ResponseStatus.ERROR.getNumber()) {
+      if (status_ != ResponseStatus.ERROR.getNumber()) {
         output.writeEnum(2, status_);
       }
       unknownFields.writeTo(output);
@@ -1777,7 +1777,7 @@ public final class Proto {
       if (!getCallIdBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, callId_);
       }
-      if (status_ != proto.Proto.CallRequestError.ResponseStatus.ERROR.getNumber()) {
+      if (status_ != ResponseStatus.ERROR.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
       }
@@ -1786,15 +1786,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.CallRequestError)) {
+      if (!(obj instanceof CallRequestError)) {
         return super.equals(obj);
       }
-      proto.Proto.CallRequestError other = (proto.Proto.CallRequestError) obj;
+      CallRequestError other = (CallRequestError) obj;
 
       boolean result = true;
       result = result && getCallId()
@@ -1804,7 +1804,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -1820,69 +1820,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequestError parseFrom(byte[] data)
+    public static CallRequestError parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.CallRequestError parseFrom(java.io.InputStream input)
+    public static CallRequestError parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.CallRequestError parseDelimitedFrom(java.io.InputStream input)
+    public static CallRequestError parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequestError parseDelimitedFrom(
+    public static CallRequestError parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.CallRequestError parseFrom(
+    public static CallRequestError parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1894,7 +1894,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.CallRequestError prototype) {
+    public static Builder newBuilder(CallRequestError prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1902,9 +1902,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1914,17 +1914,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.CallRequestError)
-        proto.Proto.CallRequestErrorOrBuilder {
+        CallRequestErrorOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_CallRequestError_descriptor;
+        return Proto.internal_static_proto_CallRequestError_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_CallRequestError_fieldAccessorTable
+        return Proto.internal_static_proto_CallRequestError_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.CallRequestError.class, proto.Proto.CallRequestError.Builder.class);
+                CallRequestError.class, Builder.class);
       }
 
       // Construct using proto.Proto.CallRequestError.newBuilder()
@@ -1933,7 +1933,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1953,23 +1953,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_CallRequestError_descriptor;
+        return Proto.internal_static_proto_CallRequestError_descriptor;
       }
 
-      public proto.Proto.CallRequestError getDefaultInstanceForType() {
-        return proto.Proto.CallRequestError.getDefaultInstance();
+      public CallRequestError getDefaultInstanceForType() {
+        return CallRequestError.getDefaultInstance();
       }
 
-      public proto.Proto.CallRequestError build() {
-        proto.Proto.CallRequestError result = buildPartial();
+      public CallRequestError build() {
+        CallRequestError result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.CallRequestError buildPartial() {
-        proto.Proto.CallRequestError result = new proto.Proto.CallRequestError(this);
+      public CallRequestError buildPartial() {
+        CallRequestError result = new CallRequestError(this);
         result.callId_ = callId_;
         result.status_ = status_;
         onBuilt();
@@ -1981,7 +1981,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -1994,25 +1994,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.CallRequestError) {
-          return mergeFrom((proto.Proto.CallRequestError)other);
+        if (other instanceof CallRequestError) {
+          return mergeFrom((CallRequestError)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.CallRequestError other) {
-        if (other == proto.Proto.CallRequestError.getDefaultInstance()) return this;
+      public Builder mergeFrom(CallRequestError other) {
+        if (other == CallRequestError.getDefaultInstance()) return this;
         if (!other.getCallId().isEmpty()) {
           callId_ = other.callId_;
           onChanged();
@@ -2033,11 +2033,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.CallRequestError parsedMessage = null;
+        CallRequestError parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.CallRequestError) e.getUnfinishedMessage();
+          parsedMessage = (CallRequestError) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2047,20 +2047,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callId_ = "";
+      private Object callId_ = "";
       /**
        * <code>string call_id = 1;</code>
        */
-      public java.lang.String getCallId() {
-        java.lang.Object ref = callId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallId() {
+        Object ref = callId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2068,11 +2068,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallIdBytes() {
-        java.lang.Object ref = callId_;
+        Object ref = callId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callId_ = b;
           return b;
         } else {
@@ -2083,7 +2083,7 @@ public final class Proto {
        * <code>string call_id = 1;</code>
        */
       public Builder setCallId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2134,14 +2134,14 @@ public final class Proto {
       /**
        * <code>.proto.CallRequestError.ResponseStatus status = 2;</code>
        */
-      public proto.Proto.CallRequestError.ResponseStatus getStatus() {
-        proto.Proto.CallRequestError.ResponseStatus result = proto.Proto.CallRequestError.ResponseStatus.valueOf(status_);
-        return result == null ? proto.Proto.CallRequestError.ResponseStatus.UNRECOGNIZED : result;
+      public ResponseStatus getStatus() {
+        ResponseStatus result = ResponseStatus.valueOf(status_);
+        return result == null ? ResponseStatus.UNRECOGNIZED : result;
       }
       /**
        * <code>.proto.CallRequestError.ResponseStatus status = 2;</code>
        */
-      public Builder setStatus(proto.Proto.CallRequestError.ResponseStatus value) {
+      public Builder setStatus(ResponseStatus value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -2174,12 +2174,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.CallRequestError)
-    private static final proto.Proto.CallRequestError DEFAULT_INSTANCE;
+    private static final CallRequestError DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.CallRequestError();
+      DEFAULT_INSTANCE = new CallRequestError();
     }
 
-    public static proto.Proto.CallRequestError getDefaultInstance() {
+    public static CallRequestError getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2197,12 +2197,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<CallRequestError> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.CallRequestError getDefaultInstanceForType() {
+    public CallRequestError getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2215,7 +2215,7 @@ public final class Proto {
     /**
      * <code>string call_id = 1;</code>
      */
-    java.lang.String getCallId();
+    String getCallId();
     /**
      * <code>string call_id = 1;</code>
      */
@@ -2225,7 +2225,7 @@ public final class Proto {
     /**
      * <code>string local_client_id = 2;</code>
      */
-    java.lang.String getLocalClientId();
+    String getLocalClientId();
     /**
      * <code>string local_client_id = 2;</code>
      */
@@ -2235,7 +2235,7 @@ public final class Proto {
     /**
      * <code>string call_message = 3;</code>
      */
-    java.lang.String getCallMessage();
+    String getCallMessage();
     /**
      * <code>string call_message = 3;</code>
      */
@@ -2260,7 +2260,7 @@ public final class Proto {
       callMessage_ = "";
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -2271,7 +2271,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -2292,19 +2292,19 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               localClientId_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callMessage_ = s;
               break;
@@ -2323,29 +2323,29 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_Peer_descriptor;
+      return Proto.internal_static_proto_Peer_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_Peer_fieldAccessorTable
+      return Proto.internal_static_proto_Peer_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.Peer.class, proto.Proto.Peer.Builder.class);
+              Peer.class, Builder.class);
     }
 
     public static final int CALL_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object callId_;
+    private volatile Object callId_;
     /**
      * <code>string call_id = 1;</code>
      */
-    public java.lang.String getCallId() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallId() {
+      Object ref = callId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callId_ = s;
         return s;
       }
@@ -2355,11 +2355,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallIdBytes() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callId_ = b;
         return b;
       } else {
@@ -2368,18 +2368,18 @@ public final class Proto {
     }
 
     public static final int LOCAL_CLIENT_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object localClientId_;
+    private volatile Object localClientId_;
     /**
      * <code>string local_client_id = 2;</code>
      */
-    public java.lang.String getLocalClientId() {
-      java.lang.Object ref = localClientId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getLocalClientId() {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         localClientId_ = s;
         return s;
       }
@@ -2389,11 +2389,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getLocalClientIdBytes() {
-      java.lang.Object ref = localClientId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         localClientId_ = b;
         return b;
       } else {
@@ -2402,18 +2402,18 @@ public final class Proto {
     }
 
     public static final int CALL_MESSAGE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object callMessage_;
+    private volatile Object callMessage_;
     /**
      * <code>string call_message = 3;</code>
      */
-    public java.lang.String getCallMessage() {
-      java.lang.Object ref = callMessage_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallMessage() {
+      Object ref = callMessage_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callMessage_ = s;
         return s;
       }
@@ -2423,11 +2423,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallMessageBytes() {
-      java.lang.Object ref = callMessage_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callMessage_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callMessage_ = b;
         return b;
       } else {
@@ -2478,15 +2478,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.Peer)) {
+      if (!(obj instanceof Peer)) {
         return super.equals(obj);
       }
-      proto.Proto.Peer other = (proto.Proto.Peer) obj;
+      Peer other = (Peer) obj;
 
       boolean result = true;
       result = result && getCallId()
@@ -2499,7 +2499,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -2517,69 +2517,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Peer parseFrom(byte[] data)
+    public static Peer parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Peer parseFrom(java.io.InputStream input)
+    public static Peer parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.Peer parseDelimitedFrom(java.io.InputStream input)
+    public static Peer parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.Peer parseDelimitedFrom(
+    public static Peer parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.Peer parseFrom(
+    public static Peer parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -2591,7 +2591,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.Peer prototype) {
+    public static Builder newBuilder(Peer prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -2599,9 +2599,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -2611,17 +2611,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.Peer)
-        proto.Proto.PeerOrBuilder {
+        PeerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_Peer_descriptor;
+        return Proto.internal_static_proto_Peer_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_Peer_fieldAccessorTable
+        return Proto.internal_static_proto_Peer_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.Peer.class, proto.Proto.Peer.Builder.class);
+                Peer.class, Builder.class);
       }
 
       // Construct using proto.Proto.Peer.newBuilder()
@@ -2630,7 +2630,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -2652,23 +2652,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_Peer_descriptor;
+        return Proto.internal_static_proto_Peer_descriptor;
       }
 
-      public proto.Proto.Peer getDefaultInstanceForType() {
-        return proto.Proto.Peer.getDefaultInstance();
+      public Peer getDefaultInstanceForType() {
+        return Peer.getDefaultInstance();
       }
 
-      public proto.Proto.Peer build() {
-        proto.Proto.Peer result = buildPartial();
+      public Peer build() {
+        Peer result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.Peer buildPartial() {
-        proto.Proto.Peer result = new proto.Proto.Peer(this);
+      public Peer buildPartial() {
+        Peer result = new Peer(this);
         result.callId_ = callId_;
         result.localClientId_ = localClientId_;
         result.callMessage_ = callMessage_;
@@ -2681,7 +2681,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -2694,25 +2694,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.Peer) {
-          return mergeFrom((proto.Proto.Peer)other);
+        if (other instanceof Peer) {
+          return mergeFrom((Peer)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.Peer other) {
-        if (other == proto.Proto.Peer.getDefaultInstance()) return this;
+      public Builder mergeFrom(Peer other) {
+        if (other == Peer.getDefaultInstance()) return this;
         if (!other.getCallId().isEmpty()) {
           callId_ = other.callId_;
           onChanged();
@@ -2738,11 +2738,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.Peer parsedMessage = null;
+        Peer parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.Peer) e.getUnfinishedMessage();
+          parsedMessage = (Peer) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -2752,20 +2752,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callId_ = "";
+      private Object callId_ = "";
       /**
        * <code>string call_id = 1;</code>
        */
-      public java.lang.String getCallId() {
-        java.lang.Object ref = callId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallId() {
+        Object ref = callId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2773,11 +2773,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallIdBytes() {
-        java.lang.Object ref = callId_;
+        Object ref = callId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callId_ = b;
           return b;
         } else {
@@ -2788,7 +2788,7 @@ public final class Proto {
        * <code>string call_id = 1;</code>
        */
       public Builder setCallId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2821,20 +2821,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object localClientId_ = "";
+      private Object localClientId_ = "";
       /**
        * <code>string local_client_id = 2;</code>
        */
-      public java.lang.String getLocalClientId() {
-        java.lang.Object ref = localClientId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalClientId() {
+        Object ref = localClientId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           localClientId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2842,11 +2842,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getLocalClientIdBytes() {
-        java.lang.Object ref = localClientId_;
+        Object ref = localClientId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           localClientId_ = b;
           return b;
         } else {
@@ -2857,7 +2857,7 @@ public final class Proto {
        * <code>string local_client_id = 2;</code>
        */
       public Builder setLocalClientId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2890,20 +2890,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callMessage_ = "";
+      private Object callMessage_ = "";
       /**
        * <code>string call_message = 3;</code>
        */
-      public java.lang.String getCallMessage() {
-        java.lang.Object ref = callMessage_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallMessage() {
+        Object ref = callMessage_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callMessage_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2911,11 +2911,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallMessageBytes() {
-        java.lang.Object ref = callMessage_;
+        Object ref = callMessage_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callMessage_ = b;
           return b;
         } else {
@@ -2926,7 +2926,7 @@ public final class Proto {
        * <code>string call_message = 3;</code>
        */
       public Builder setCallMessage(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2973,12 +2973,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.Peer)
-    private static final proto.Proto.Peer DEFAULT_INSTANCE;
+    private static final Peer DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.Peer();
+      DEFAULT_INSTANCE = new Peer();
     }
 
-    public static proto.Proto.Peer getDefaultInstance() {
+    public static Peer getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2996,12 +2996,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Peer> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.Peer getDefaultInstanceForType() {
+    public Peer getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3012,43 +3012,53 @@ public final class Proto {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>string remote_client_id = 1;</code>
+     * <code>string local_client_id = 1;</code>
      */
-    java.lang.String getRemoteClientId();
+    String getLocalClientId();
     /**
-     * <code>string remote_client_id = 1;</code>
+     * <code>string local_client_id = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getLocalClientIdBytes();
+
+    /**
+     * <code>string remote_client_id = 2;</code>
+     */
+    String getRemoteClientId();
+    /**
+     * <code>string remote_client_id = 2;</code>
      */
     com.google.protobuf.ByteString
         getRemoteClientIdBytes();
 
     /**
-     * <code>string call_id = 2;</code>
+     * <code>string call_id = 3;</code>
      */
-    java.lang.String getCallId();
+    String getCallId();
     /**
-     * <code>string call_id = 2;</code>
+     * <code>string call_id = 3;</code>
      */
     com.google.protobuf.ByteString
         getCallIdBytes();
 
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 4;</code>
      */
-    java.lang.String getDescription();
+    String getDescription();
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 4;</code>
      */
     com.google.protobuf.ByteString
         getDescriptionBytes();
 
     /**
-     * <code>.proto.Session.Type session_type = 4;</code>
+     * <code>.proto.Session.Type session_type = 5;</code>
      */
     int getSessionTypeValue();
     /**
-     * <code>.proto.Session.Type session_type = 4;</code>
+     * <code>.proto.Session.Type session_type = 5;</code>
      */
-    proto.Proto.Session.Type getSessionType();
+    Session.Type getSessionType();
   }
   /**
    * Protobuf type {@code proto.Session}
@@ -3063,13 +3073,14 @@ public final class Proto {
       super(builder);
     }
     private Session() {
+      localClientId_ = "";
       remoteClientId_ = "";
       callId_ = "";
       description_ = "";
       sessionType_ = 0;
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -3080,7 +3091,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -3101,24 +3112,30 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
+
+              localClientId_ = s;
+              break;
+            }
+            case 18: {
+              String s = input.readStringRequireUtf8();
 
               remoteClientId_ = s;
               break;
             }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 26: {
+              String s = input.readStringRequireUtf8();
 
               callId_ = s;
               break;
             }
-            case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+            case 34: {
+              String s = input.readStringRequireUtf8();
 
               description_ = s;
               break;
             }
-            case 32: {
+            case 40: {
               int rawValue = input.readEnum();
 
               sessionType_ = rawValue;
@@ -3138,14 +3155,14 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_Session_descriptor;
+      return Proto.internal_static_proto_Session_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_Session_fieldAccessorTable
+      return Proto.internal_static_proto_Session_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.Session.class, proto.Proto.Session.Builder.class);
+              Session.class, Builder.class);
     }
 
     /**
@@ -3176,7 +3193,7 @@ public final class Proto {
 
       public final int getNumber() {
         if (this == UNRECOGNIZED) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
               "Can't get the number of an unknown enum value.");
         }
         return value;
@@ -3185,7 +3202,7 @@ public final class Proto {
       /**
        * @deprecated Use {@link #forNumber(int)} instead.
        */
-      @java.lang.Deprecated
+      @Deprecated
       public static Type valueOf(int value) {
         return forNumber(value);
       }
@@ -3220,7 +3237,7 @@ public final class Proto {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return proto.Proto.Session.getDescriptor().getEnumTypes().get(0);
+        return Session.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
@@ -3228,7 +3245,7 @@ public final class Proto {
       public static Type valueOf(
           com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
         if (desc.getType() != getDescriptor()) {
-          throw new java.lang.IllegalArgumentException(
+          throw new IllegalArgumentException(
             "EnumValueDescriptor is not for this type.");
         }
         if (desc.getIndex() == -1) {
@@ -3246,33 +3263,67 @@ public final class Proto {
       // @@protoc_insertion_point(enum_scope:proto.Session.Type)
     }
 
-    public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object remoteClientId_;
+    public static final int LOCAL_CLIENT_ID_FIELD_NUMBER = 1;
+    private volatile Object localClientId_;
     /**
-     * <code>string remote_client_id = 1;</code>
+     * <code>string local_client_id = 1;</code>
      */
-    public java.lang.String getRemoteClientId() {
-      java.lang.Object ref = remoteClientId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getLocalClientId() {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
+        localClientId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string local_client_id = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getLocalClientIdBytes() {
+      Object ref = localClientId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        localClientId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 2;
+    private volatile Object remoteClientId_;
+    /**
+     * <code>string remote_client_id = 2;</code>
+     */
+    public String getRemoteClientId() {
+      Object ref = remoteClientId_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
         remoteClientId_ = s;
         return s;
       }
     }
     /**
-     * <code>string remote_client_id = 1;</code>
+     * <code>string remote_client_id = 2;</code>
      */
     public com.google.protobuf.ByteString
         getRemoteClientIdBytes() {
-      java.lang.Object ref = remoteClientId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = remoteClientId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         remoteClientId_ = b;
         return b;
       } else {
@@ -3280,33 +3331,33 @@ public final class Proto {
       }
     }
 
-    public static final int CALL_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object callId_;
+    public static final int CALL_ID_FIELD_NUMBER = 3;
+    private volatile Object callId_;
     /**
-     * <code>string call_id = 2;</code>
+     * <code>string call_id = 3;</code>
      */
-    public java.lang.String getCallId() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallId() {
+      Object ref = callId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callId_ = s;
         return s;
       }
     }
     /**
-     * <code>string call_id = 2;</code>
+     * <code>string call_id = 3;</code>
      */
     public com.google.protobuf.ByteString
         getCallIdBytes() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callId_ = b;
         return b;
       } else {
@@ -3314,33 +3365,33 @@ public final class Proto {
       }
     }
 
-    public static final int DESCRIPTION_FIELD_NUMBER = 3;
-    private volatile java.lang.Object description_;
+    public static final int DESCRIPTION_FIELD_NUMBER = 4;
+    private volatile Object description_;
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 4;</code>
      */
-    public java.lang.String getDescription() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getDescription() {
+      Object ref = description_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         description_ = s;
         return s;
       }
     }
     /**
-     * <code>string description = 3;</code>
+     * <code>string description = 4;</code>
      */
     public com.google.protobuf.ByteString
         getDescriptionBytes() {
-      java.lang.Object ref = description_;
-      if (ref instanceof java.lang.String) {
+      Object ref = description_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         description_ = b;
         return b;
       } else {
@@ -3348,20 +3399,20 @@ public final class Proto {
       }
     }
 
-    public static final int SESSION_TYPE_FIELD_NUMBER = 4;
+    public static final int SESSION_TYPE_FIELD_NUMBER = 5;
     private int sessionType_;
     /**
-     * <code>.proto.Session.Type session_type = 4;</code>
+     * <code>.proto.Session.Type session_type = 5;</code>
      */
     public int getSessionTypeValue() {
       return sessionType_;
     }
     /**
-     * <code>.proto.Session.Type session_type = 4;</code>
+     * <code>.proto.Session.Type session_type = 5;</code>
      */
-    public proto.Proto.Session.Type getSessionType() {
-      proto.Proto.Session.Type result = proto.Proto.Session.Type.valueOf(sessionType_);
-      return result == null ? proto.Proto.Session.Type.UNRECOGNIZED : result;
+    public Type getSessionType() {
+      Type result = Type.valueOf(sessionType_);
+      return result == null ? Type.UNRECOGNIZED : result;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3376,17 +3427,20 @@ public final class Proto {
 
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (!getLocalClientIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, localClientId_);
+      }
       if (!getRemoteClientIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, remoteClientId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, remoteClientId_);
       }
       if (!getCallIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, callId_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, callId_);
       }
       if (!getDescriptionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 3, description_);
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, description_);
       }
-      if (sessionType_ != proto.Proto.Session.Type.OFFER.getNumber()) {
-        output.writeEnum(4, sessionType_);
+      if (sessionType_ != Type.OFFER.getNumber()) {
+        output.writeEnum(5, sessionType_);
       }
       unknownFields.writeTo(output);
     }
@@ -3396,35 +3450,40 @@ public final class Proto {
       if (size != -1) return size;
 
       size = 0;
+      if (!getLocalClientIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, localClientId_);
+      }
       if (!getRemoteClientIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, remoteClientId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, remoteClientId_);
       }
       if (!getCallIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, callId_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, callId_);
       }
       if (!getDescriptionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, description_);
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, description_);
       }
-      if (sessionType_ != proto.Proto.Session.Type.OFFER.getNumber()) {
+      if (sessionType_ != Type.OFFER.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(4, sessionType_);
+          .computeEnumSize(5, sessionType_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.Session)) {
+      if (!(obj instanceof Session)) {
         return super.equals(obj);
       }
-      proto.Proto.Session other = (proto.Proto.Session) obj;
+      Session other = (Session) obj;
 
       boolean result = true;
+      result = result && getLocalClientId()
+          .equals(other.getLocalClientId());
       result = result && getRemoteClientId()
           .equals(other.getRemoteClientId());
       result = result && getCallId()
@@ -3436,13 +3495,15 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + LOCAL_CLIENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getLocalClientId().hashCode();
       hash = (37 * hash) + REMOTE_CLIENT_ID_FIELD_NUMBER;
       hash = (53 * hash) + getRemoteClientId().hashCode();
       hash = (37 * hash) + CALL_ID_FIELD_NUMBER;
@@ -3456,69 +3517,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Session parseFrom(byte[] data)
+    public static Session parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.Session parseFrom(java.io.InputStream input)
+    public static Session parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.Session parseDelimitedFrom(java.io.InputStream input)
+    public static Session parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.Session parseDelimitedFrom(
+    public static Session parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.Session parseFrom(
+    public static Session parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3530,7 +3591,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.Session prototype) {
+    public static Builder newBuilder(Session prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -3538,9 +3599,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -3550,17 +3611,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.Session)
-        proto.Proto.SessionOrBuilder {
+        SessionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_Session_descriptor;
+        return Proto.internal_static_proto_Session_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_Session_fieldAccessorTable
+        return Proto.internal_static_proto_Session_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.Session.class, proto.Proto.Session.Builder.class);
+                Session.class, Builder.class);
       }
 
       // Construct using proto.Proto.Session.newBuilder()
@@ -3569,7 +3630,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -3580,6 +3641,8 @@ public final class Proto {
       }
       public Builder clear() {
         super.clear();
+        localClientId_ = "";
+
         remoteClientId_ = "";
 
         callId_ = "";
@@ -3593,23 +3656,24 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_Session_descriptor;
+        return Proto.internal_static_proto_Session_descriptor;
       }
 
-      public proto.Proto.Session getDefaultInstanceForType() {
-        return proto.Proto.Session.getDefaultInstance();
+      public Session getDefaultInstanceForType() {
+        return Session.getDefaultInstance();
       }
 
-      public proto.Proto.Session build() {
-        proto.Proto.Session result = buildPartial();
+      public Session build() {
+        Session result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.Session buildPartial() {
-        proto.Proto.Session result = new proto.Proto.Session(this);
+      public Session buildPartial() {
+        Session result = new Session(this);
+        result.localClientId_ = localClientId_;
         result.remoteClientId_ = remoteClientId_;
         result.callId_ = callId_;
         result.description_ = description_;
@@ -3623,7 +3687,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -3636,25 +3700,29 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.Session) {
-          return mergeFrom((proto.Proto.Session)other);
+        if (other instanceof Session) {
+          return mergeFrom((Session)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.Session other) {
-        if (other == proto.Proto.Session.getDefaultInstance()) return this;
+      public Builder mergeFrom(Session other) {
+        if (other == Session.getDefaultInstance()) return this;
+        if (!other.getLocalClientId().isEmpty()) {
+          localClientId_ = other.localClientId_;
+          onChanged();
+        }
         if (!other.getRemoteClientId().isEmpty()) {
           remoteClientId_ = other.remoteClientId_;
           onChanged();
@@ -3683,11 +3751,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.Session parsedMessage = null;
+        Session parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.Session) e.getUnfinishedMessage();
+          parsedMessage = (Session) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -3697,32 +3765,101 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object remoteClientId_ = "";
+      private Object localClientId_ = "";
       /**
-       * <code>string remote_client_id = 1;</code>
+       * <code>string local_client_id = 1;</code>
        */
-      public java.lang.String getRemoteClientId() {
-        java.lang.Object ref = remoteClientId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLocalClientId() {
+        Object ref = localClientId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          remoteClientId_ = s;
+          String s = bs.toStringUtf8();
+          localClientId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
-       * <code>string remote_client_id = 1;</code>
+       * <code>string local_client_id = 1;</code>
        */
       public com.google.protobuf.ByteString
-          getRemoteClientIdBytes() {
-        java.lang.Object ref = remoteClientId_;
+          getLocalClientIdBytes() {
+        Object ref = localClientId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
+          localClientId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string local_client_id = 1;</code>
+       */
+      public Builder setLocalClientId(
+          String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        localClientId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_client_id = 1;</code>
+       */
+      public Builder clearLocalClientId() {
+        
+        localClientId_ = getDefaultInstance().getLocalClientId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string local_client_id = 1;</code>
+       */
+      public Builder setLocalClientIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        localClientId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private Object remoteClientId_ = "";
+      /**
+       * <code>string remote_client_id = 2;</code>
+       */
+      public String getRemoteClientId() {
+        Object ref = remoteClientId_;
+        if (!(ref instanceof String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          String s = bs.toStringUtf8();
+          remoteClientId_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      /**
+       * <code>string remote_client_id = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getRemoteClientIdBytes() {
+        Object ref = remoteClientId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (String) ref);
           remoteClientId_ = b;
           return b;
         } else {
@@ -3730,10 +3867,10 @@ public final class Proto {
         }
       }
       /**
-       * <code>string remote_client_id = 1;</code>
+       * <code>string remote_client_id = 2;</code>
        */
       public Builder setRemoteClientId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3743,7 +3880,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string remote_client_id = 1;</code>
+       * <code>string remote_client_id = 2;</code>
        */
       public Builder clearRemoteClientId() {
         
@@ -3752,7 +3889,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string remote_client_id = 1;</code>
+       * <code>string remote_client_id = 2;</code>
        */
       public Builder setRemoteClientIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3766,32 +3903,32 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object callId_ = "";
+      private Object callId_ = "";
       /**
-       * <code>string call_id = 2;</code>
+       * <code>string call_id = 3;</code>
        */
-      public java.lang.String getCallId() {
-        java.lang.Object ref = callId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallId() {
+        Object ref = callId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
-       * <code>string call_id = 2;</code>
+       * <code>string call_id = 3;</code>
        */
       public com.google.protobuf.ByteString
           getCallIdBytes() {
-        java.lang.Object ref = callId_;
+        Object ref = callId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callId_ = b;
           return b;
         } else {
@@ -3799,10 +3936,10 @@ public final class Proto {
         }
       }
       /**
-       * <code>string call_id = 2;</code>
+       * <code>string call_id = 3;</code>
        */
       public Builder setCallId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3812,7 +3949,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string call_id = 2;</code>
+       * <code>string call_id = 3;</code>
        */
       public Builder clearCallId() {
         
@@ -3821,7 +3958,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string call_id = 2;</code>
+       * <code>string call_id = 3;</code>
        */
       public Builder setCallIdBytes(
           com.google.protobuf.ByteString value) {
@@ -3835,32 +3972,32 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object description_ = "";
+      private Object description_ = "";
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 4;</code>
        */
-      public java.lang.String getDescription() {
-        java.lang.Object ref = description_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getDescription() {
+        Object ref = description_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           description_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 4;</code>
        */
       public com.google.protobuf.ByteString
           getDescriptionBytes() {
-        java.lang.Object ref = description_;
+        Object ref = description_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           description_ = b;
           return b;
         } else {
@@ -3868,10 +4005,10 @@ public final class Proto {
         }
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 4;</code>
        */
       public Builder setDescription(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -3881,7 +4018,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 4;</code>
        */
       public Builder clearDescription() {
         
@@ -3890,7 +4027,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>string description = 3;</code>
+       * <code>string description = 4;</code>
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
@@ -3906,13 +4043,13 @@ public final class Proto {
 
       private int sessionType_ = 0;
       /**
-       * <code>.proto.Session.Type session_type = 4;</code>
+       * <code>.proto.Session.Type session_type = 5;</code>
        */
       public int getSessionTypeValue() {
         return sessionType_;
       }
       /**
-       * <code>.proto.Session.Type session_type = 4;</code>
+       * <code>.proto.Session.Type session_type = 5;</code>
        */
       public Builder setSessionTypeValue(int value) {
         sessionType_ = value;
@@ -3920,16 +4057,16 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>.proto.Session.Type session_type = 4;</code>
+       * <code>.proto.Session.Type session_type = 5;</code>
        */
-      public proto.Proto.Session.Type getSessionType() {
-        proto.Proto.Session.Type result = proto.Proto.Session.Type.valueOf(sessionType_);
-        return result == null ? proto.Proto.Session.Type.UNRECOGNIZED : result;
+      public Type getSessionType() {
+        Type result = Type.valueOf(sessionType_);
+        return result == null ? Type.UNRECOGNIZED : result;
       }
       /**
-       * <code>.proto.Session.Type session_type = 4;</code>
+       * <code>.proto.Session.Type session_type = 5;</code>
        */
-      public Builder setSessionType(proto.Proto.Session.Type value) {
+      public Builder setSessionType(Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
@@ -3939,7 +4076,7 @@ public final class Proto {
         return this;
       }
       /**
-       * <code>.proto.Session.Type session_type = 4;</code>
+       * <code>.proto.Session.Type session_type = 5;</code>
        */
       public Builder clearSessionType() {
         
@@ -3962,12 +4099,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.Session)
-    private static final proto.Proto.Session DEFAULT_INSTANCE;
+    private static final Session DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.Session();
+      DEFAULT_INSTANCE = new Session();
     }
 
-    public static proto.Proto.Session getDefaultInstance() {
+    public static Session getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -3985,12 +4122,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<Session> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.Session getDefaultInstanceForType() {
+    public Session getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4003,7 +4140,7 @@ public final class Proto {
     /**
      * <code>string sdp_mid = 1;</code>
      */
-    java.lang.String getSdpMid();
+    String getSdpMid();
     /**
      * <code>string sdp_mid = 1;</code>
      */
@@ -4018,7 +4155,7 @@ public final class Proto {
     /**
      * <code>string sdp = 3;</code>
      */
-    java.lang.String getSdp();
+    String getSdp();
     /**
      * <code>string sdp = 3;</code>
      */
@@ -4028,7 +4165,7 @@ public final class Proto {
     /**
      * <code>string server_url = 4;</code>
      */
-    java.lang.String getServerUrl();
+    String getServerUrl();
     /**
      * <code>string server_url = 4;</code>
      */
@@ -4054,7 +4191,7 @@ public final class Proto {
       serverUrl_ = "";
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4065,7 +4202,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -4086,7 +4223,7 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sdpMid_ = s;
               break;
@@ -4097,13 +4234,13 @@ public final class Proto {
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sdp_ = s;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               serverUrl_ = s;
               break;
@@ -4122,29 +4259,29 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_IceCandidate_descriptor;
+      return Proto.internal_static_proto_IceCandidate_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_IceCandidate_fieldAccessorTable
+      return Proto.internal_static_proto_IceCandidate_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.IceCandidate.class, proto.Proto.IceCandidate.Builder.class);
+              IceCandidate.class, Builder.class);
     }
 
     public static final int SDP_MID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object sdpMid_;
+    private volatile Object sdpMid_;
     /**
      * <code>string sdp_mid = 1;</code>
      */
-    public java.lang.String getSdpMid() {
-      java.lang.Object ref = sdpMid_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSdpMid() {
+      Object ref = sdpMid_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sdpMid_ = s;
         return s;
       }
@@ -4154,11 +4291,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getSdpMidBytes() {
-      java.lang.Object ref = sdpMid_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sdpMid_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         sdpMid_ = b;
         return b;
       } else {
@@ -4176,18 +4313,18 @@ public final class Proto {
     }
 
     public static final int SDP_FIELD_NUMBER = 3;
-    private volatile java.lang.Object sdp_;
+    private volatile Object sdp_;
     /**
      * <code>string sdp = 3;</code>
      */
-    public java.lang.String getSdp() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSdp() {
+      Object ref = sdp_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sdp_ = s;
         return s;
       }
@@ -4197,11 +4334,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getSdpBytes() {
-      java.lang.Object ref = sdp_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sdp_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         sdp_ = b;
         return b;
       } else {
@@ -4210,18 +4347,18 @@ public final class Proto {
     }
 
     public static final int SERVER_URL_FIELD_NUMBER = 4;
-    private volatile java.lang.Object serverUrl_;
+    private volatile Object serverUrl_;
     /**
      * <code>string server_url = 4;</code>
      */
-    public java.lang.String getServerUrl() {
-      java.lang.Object ref = serverUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getServerUrl() {
+      Object ref = serverUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         serverUrl_ = s;
         return s;
       }
@@ -4231,11 +4368,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getServerUrlBytes() {
-      java.lang.Object ref = serverUrl_;
-      if (ref instanceof java.lang.String) {
+      Object ref = serverUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         serverUrl_ = b;
         return b;
       } else {
@@ -4293,15 +4430,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.IceCandidate)) {
+      if (!(obj instanceof IceCandidate)) {
         return super.equals(obj);
       }
-      proto.Proto.IceCandidate other = (proto.Proto.IceCandidate) obj;
+      IceCandidate other = (IceCandidate) obj;
 
       boolean result = true;
       result = result && getSdpMid()
@@ -4316,7 +4453,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -4336,69 +4473,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceCandidate parseFrom(byte[] data)
+    public static IceCandidate parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceCandidate parseFrom(java.io.InputStream input)
+    public static IceCandidate parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.IceCandidate parseDelimitedFrom(java.io.InputStream input)
+    public static IceCandidate parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceCandidate parseDelimitedFrom(
+    public static IceCandidate parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceCandidate parseFrom(
+    public static IceCandidate parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4410,7 +4547,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.IceCandidate prototype) {
+    public static Builder newBuilder(IceCandidate prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4418,9 +4555,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -4430,17 +4567,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.IceCandidate)
-        proto.Proto.IceCandidateOrBuilder {
+        IceCandidateOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_IceCandidate_descriptor;
+        return Proto.internal_static_proto_IceCandidate_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_IceCandidate_fieldAccessorTable
+        return Proto.internal_static_proto_IceCandidate_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.IceCandidate.class, proto.Proto.IceCandidate.Builder.class);
+                IceCandidate.class, Builder.class);
       }
 
       // Construct using proto.Proto.IceCandidate.newBuilder()
@@ -4449,7 +4586,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -4473,23 +4610,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_IceCandidate_descriptor;
+        return Proto.internal_static_proto_IceCandidate_descriptor;
       }
 
-      public proto.Proto.IceCandidate getDefaultInstanceForType() {
-        return proto.Proto.IceCandidate.getDefaultInstance();
+      public IceCandidate getDefaultInstanceForType() {
+        return IceCandidate.getDefaultInstance();
       }
 
-      public proto.Proto.IceCandidate build() {
-        proto.Proto.IceCandidate result = buildPartial();
+      public IceCandidate build() {
+        IceCandidate result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.IceCandidate buildPartial() {
-        proto.Proto.IceCandidate result = new proto.Proto.IceCandidate(this);
+      public IceCandidate buildPartial() {
+        IceCandidate result = new IceCandidate(this);
         result.sdpMid_ = sdpMid_;
         result.spdMLineIndex_ = spdMLineIndex_;
         result.sdp_ = sdp_;
@@ -4503,7 +4640,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -4516,25 +4653,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.IceCandidate) {
-          return mergeFrom((proto.Proto.IceCandidate)other);
+        if (other instanceof IceCandidate) {
+          return mergeFrom((IceCandidate)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.IceCandidate other) {
-        if (other == proto.Proto.IceCandidate.getDefaultInstance()) return this;
+      public Builder mergeFrom(IceCandidate other) {
+        if (other == IceCandidate.getDefaultInstance()) return this;
         if (!other.getSdpMid().isEmpty()) {
           sdpMid_ = other.sdpMid_;
           onChanged();
@@ -4563,11 +4700,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.IceCandidate parsedMessage = null;
+        IceCandidate parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.IceCandidate) e.getUnfinishedMessage();
+          parsedMessage = (IceCandidate) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4577,20 +4714,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object sdpMid_ = "";
+      private Object sdpMid_ = "";
       /**
        * <code>string sdp_mid = 1;</code>
        */
-      public java.lang.String getSdpMid() {
-        java.lang.Object ref = sdpMid_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getSdpMid() {
+        Object ref = sdpMid_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           sdpMid_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -4598,11 +4735,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getSdpMidBytes() {
-        java.lang.Object ref = sdpMid_;
+        Object ref = sdpMid_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           sdpMid_ = b;
           return b;
         } else {
@@ -4613,7 +4750,7 @@ public final class Proto {
        * <code>string sdp_mid = 1;</code>
        */
       public Builder setSdpMid(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4672,20 +4809,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object sdp_ = "";
+      private Object sdp_ = "";
       /**
        * <code>string sdp = 3;</code>
        */
-      public java.lang.String getSdp() {
-        java.lang.Object ref = sdp_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getSdp() {
+        Object ref = sdp_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           sdp_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -4693,11 +4830,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getSdpBytes() {
-        java.lang.Object ref = sdp_;
+        Object ref = sdp_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           sdp_ = b;
           return b;
         } else {
@@ -4708,7 +4845,7 @@ public final class Proto {
        * <code>string sdp = 3;</code>
        */
       public Builder setSdp(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4741,20 +4878,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object serverUrl_ = "";
+      private Object serverUrl_ = "";
       /**
        * <code>string server_url = 4;</code>
        */
-      public java.lang.String getServerUrl() {
-        java.lang.Object ref = serverUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getServerUrl() {
+        Object ref = serverUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           serverUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -4762,11 +4899,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getServerUrlBytes() {
-        java.lang.Object ref = serverUrl_;
+        Object ref = serverUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           serverUrl_ = b;
           return b;
         } else {
@@ -4777,7 +4914,7 @@ public final class Proto {
        * <code>string server_url = 4;</code>
        */
       public Builder setServerUrl(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4824,12 +4961,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.IceCandidate)
-    private static final proto.Proto.IceCandidate DEFAULT_INSTANCE;
+    private static final IceCandidate DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.IceCandidate();
+      DEFAULT_INSTANCE = new IceCandidate();
     }
 
-    public static proto.Proto.IceCandidate getDefaultInstance() {
+    public static IceCandidate getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4847,12 +4984,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<IceCandidate> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.IceCandidate getDefaultInstanceForType() {
+    public IceCandidate getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -4865,7 +5002,7 @@ public final class Proto {
     /**
      * <code>string call_id = 1;</code>
      */
-    java.lang.String getCallId();
+    String getCallId();
     /**
      * <code>string call_id = 1;</code>
      */
@@ -4875,7 +5012,7 @@ public final class Proto {
     /**
      * <code>string remote_client_id = 2;</code>
      */
-    java.lang.String getRemoteClientId();
+    String getRemoteClientId();
     /**
      * <code>string remote_client_id = 2;</code>
      */
@@ -4885,12 +5022,12 @@ public final class Proto {
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    java.util.List<proto.Proto.IceCandidate> 
+    java.util.List<IceCandidate>
         getIceServersList();
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    proto.Proto.IceCandidate getIceServers(int index);
+    IceCandidate getIceServers(int index);
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
@@ -4898,12 +5035,12 @@ public final class Proto {
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    java.util.List<? extends proto.Proto.IceCandidateOrBuilder> 
+    java.util.List<? extends IceCandidateOrBuilder>
         getIceServersOrBuilderList();
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    proto.Proto.IceCandidateOrBuilder getIceServersOrBuilder(
+    IceCandidateOrBuilder getIceServersOrBuilder(
         int index);
   }
   /**
@@ -4924,7 +5061,7 @@ public final class Proto {
       iceServers_ = java.util.Collections.emptyList();
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -4935,7 +5072,7 @@ public final class Proto {
         throws com.google.protobuf.InvalidProtocolBufferException {
       this();
       if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException();
       }
       int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
@@ -4956,24 +5093,24 @@ public final class Proto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               callId_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               remoteClientId_ = s;
               break;
             }
             case 26: {
               if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
-                iceServers_ = new java.util.ArrayList<proto.Proto.IceCandidate>();
+                iceServers_ = new java.util.ArrayList<IceCandidate>();
                 mutable_bitField0_ |= 0x00000004;
               }
               iceServers_.add(
-                  input.readMessage(proto.Proto.IceCandidate.parser(), extensionRegistry));
+                  input.readMessage(IceCandidate.parser(), extensionRegistry));
               break;
             }
           }
@@ -4993,30 +5130,30 @@ public final class Proto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return proto.Proto.internal_static_proto_IceServers_descriptor;
+      return Proto.internal_static_proto_IceServers_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return proto.Proto.internal_static_proto_IceServers_fieldAccessorTable
+      return Proto.internal_static_proto_IceServers_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              proto.Proto.IceServers.class, proto.Proto.IceServers.Builder.class);
+              IceServers.class, Builder.class);
     }
 
     private int bitField0_;
     public static final int CALL_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object callId_;
+    private volatile Object callId_;
     /**
      * <code>string call_id = 1;</code>
      */
-    public java.lang.String getCallId() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCallId() {
+      Object ref = callId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         callId_ = s;
         return s;
       }
@@ -5026,11 +5163,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getCallIdBytes() {
-      java.lang.Object ref = callId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = callId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         callId_ = b;
         return b;
       } else {
@@ -5039,18 +5176,18 @@ public final class Proto {
     }
 
     public static final int REMOTE_CLIENT_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object remoteClientId_;
+    private volatile Object remoteClientId_;
     /**
      * <code>string remote_client_id = 2;</code>
      */
-    public java.lang.String getRemoteClientId() {
-      java.lang.Object ref = remoteClientId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getRemoteClientId() {
+      Object ref = remoteClientId_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         remoteClientId_ = s;
         return s;
       }
@@ -5060,11 +5197,11 @@ public final class Proto {
      */
     public com.google.protobuf.ByteString
         getRemoteClientIdBytes() {
-      java.lang.Object ref = remoteClientId_;
-      if (ref instanceof java.lang.String) {
+      Object ref = remoteClientId_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         remoteClientId_ = b;
         return b;
       } else {
@@ -5073,17 +5210,17 @@ public final class Proto {
     }
 
     public static final int ICE_SERVERS_FIELD_NUMBER = 3;
-    private java.util.List<proto.Proto.IceCandidate> iceServers_;
+    private java.util.List<IceCandidate> iceServers_;
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    public java.util.List<proto.Proto.IceCandidate> getIceServersList() {
+    public java.util.List<IceCandidate> getIceServersList() {
       return iceServers_;
     }
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    public java.util.List<? extends proto.Proto.IceCandidateOrBuilder> 
+    public java.util.List<? extends IceCandidateOrBuilder>
         getIceServersOrBuilderList() {
       return iceServers_;
     }
@@ -5096,13 +5233,13 @@ public final class Proto {
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    public proto.Proto.IceCandidate getIceServers(int index) {
+    public IceCandidate getIceServers(int index) {
       return iceServers_.get(index);
     }
     /**
      * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
      */
-    public proto.Proto.IceCandidateOrBuilder getIceServersOrBuilder(
+    public IceCandidateOrBuilder getIceServersOrBuilder(
         int index) {
       return iceServers_.get(index);
     }
@@ -5151,15 +5288,15 @@ public final class Proto {
       return size;
     }
 
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof proto.Proto.IceServers)) {
+      if (!(obj instanceof IceServers)) {
         return super.equals(obj);
       }
-      proto.Proto.IceServers other = (proto.Proto.IceServers) obj;
+      IceServers other = (IceServers) obj;
 
       boolean result = true;
       result = result && getCallId()
@@ -5172,7 +5309,7 @@ public final class Proto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -5192,69 +5329,69 @@ public final class Proto {
       return hash;
     }
 
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceServers parseFrom(byte[] data)
+    public static IceServers parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static proto.Proto.IceServers parseFrom(java.io.InputStream input)
+    public static IceServers parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.IceServers parseDelimitedFrom(java.io.InputStream input)
+    public static IceServers parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceServers parseDelimitedFrom(
+    public static IceServers parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static proto.Proto.IceServers parseFrom(
+    public static IceServers parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -5266,7 +5403,7 @@ public final class Proto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(proto.Proto.IceServers prototype) {
+    public static Builder newBuilder(IceServers prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -5274,9 +5411,9 @@ public final class Proto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -5286,17 +5423,17 @@ public final class Proto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:proto.IceServers)
-        proto.Proto.IceServersOrBuilder {
+        IceServersOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return proto.Proto.internal_static_proto_IceServers_descriptor;
+        return Proto.internal_static_proto_IceServers_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return proto.Proto.internal_static_proto_IceServers_fieldAccessorTable
+        return Proto.internal_static_proto_IceServers_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                proto.Proto.IceServers.class, proto.Proto.IceServers.Builder.class);
+                IceServers.class, Builder.class);
       }
 
       // Construct using proto.Proto.IceServers.newBuilder()
@@ -5305,7 +5442,7 @@ public final class Proto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -5332,23 +5469,23 @@ public final class Proto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return proto.Proto.internal_static_proto_IceServers_descriptor;
+        return Proto.internal_static_proto_IceServers_descriptor;
       }
 
-      public proto.Proto.IceServers getDefaultInstanceForType() {
-        return proto.Proto.IceServers.getDefaultInstance();
+      public IceServers getDefaultInstanceForType() {
+        return IceServers.getDefaultInstance();
       }
 
-      public proto.Proto.IceServers build() {
-        proto.Proto.IceServers result = buildPartial();
+      public IceServers build() {
+        IceServers result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public proto.Proto.IceServers buildPartial() {
-        proto.Proto.IceServers result = new proto.Proto.IceServers(this);
+      public IceServers buildPartial() {
+        IceServers result = new IceServers(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         result.callId_ = callId_;
@@ -5372,7 +5509,7 @@ public final class Proto {
       }
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.setField(field, value);
       }
       public Builder clearField(
@@ -5385,25 +5522,25 @@ public final class Proto {
       }
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
+          int index, Object value) {
         return (Builder) super.setRepeatedField(field, index, value);
       }
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
+          Object value) {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof proto.Proto.IceServers) {
-          return mergeFrom((proto.Proto.IceServers)other);
+        if (other instanceof IceServers) {
+          return mergeFrom((IceServers)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(proto.Proto.IceServers other) {
-        if (other == proto.Proto.IceServers.getDefaultInstance()) return this;
+      public Builder mergeFrom(IceServers other) {
+        if (other == IceServers.getDefaultInstance()) return this;
         if (!other.getCallId().isEmpty()) {
           callId_ = other.callId_;
           onChanged();
@@ -5451,11 +5588,11 @@ public final class Proto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        proto.Proto.IceServers parsedMessage = null;
+        IceServers parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (proto.Proto.IceServers) e.getUnfinishedMessage();
+          parsedMessage = (IceServers) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -5466,20 +5603,20 @@ public final class Proto {
       }
       private int bitField0_;
 
-      private java.lang.Object callId_ = "";
+      private Object callId_ = "";
       /**
        * <code>string call_id = 1;</code>
        */
-      public java.lang.String getCallId() {
-        java.lang.Object ref = callId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getCallId() {
+        Object ref = callId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           callId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -5487,11 +5624,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getCallIdBytes() {
-        java.lang.Object ref = callId_;
+        Object ref = callId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           callId_ = b;
           return b;
         } else {
@@ -5502,7 +5639,7 @@ public final class Proto {
        * <code>string call_id = 1;</code>
        */
       public Builder setCallId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5535,20 +5672,20 @@ public final class Proto {
         return this;
       }
 
-      private java.lang.Object remoteClientId_ = "";
+      private Object remoteClientId_ = "";
       /**
        * <code>string remote_client_id = 2;</code>
        */
-      public java.lang.String getRemoteClientId() {
-        java.lang.Object ref = remoteClientId_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getRemoteClientId() {
+        Object ref = remoteClientId_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           remoteClientId_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -5556,11 +5693,11 @@ public final class Proto {
        */
       public com.google.protobuf.ByteString
           getRemoteClientIdBytes() {
-        java.lang.Object ref = remoteClientId_;
+        Object ref = remoteClientId_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           remoteClientId_ = b;
           return b;
         } else {
@@ -5571,7 +5708,7 @@ public final class Proto {
        * <code>string remote_client_id = 2;</code>
        */
       public Builder setRemoteClientId(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5604,22 +5741,22 @@ public final class Proto {
         return this;
       }
 
-      private java.util.List<proto.Proto.IceCandidate> iceServers_ =
+      private java.util.List<IceCandidate> iceServers_ =
         java.util.Collections.emptyList();
       private void ensureIceServersIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          iceServers_ = new java.util.ArrayList<proto.Proto.IceCandidate>(iceServers_);
+          iceServers_ = new java.util.ArrayList<IceCandidate>(iceServers_);
           bitField0_ |= 0x00000004;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          proto.Proto.IceCandidate, proto.Proto.IceCandidate.Builder, proto.Proto.IceCandidateOrBuilder> iceServersBuilder_;
+          IceCandidate, IceCandidate.Builder, IceCandidateOrBuilder> iceServersBuilder_;
 
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public java.util.List<proto.Proto.IceCandidate> getIceServersList() {
+      public java.util.List<IceCandidate> getIceServersList() {
         if (iceServersBuilder_ == null) {
           return java.util.Collections.unmodifiableList(iceServers_);
         } else {
@@ -5639,7 +5776,7 @@ public final class Proto {
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public proto.Proto.IceCandidate getIceServers(int index) {
+      public IceCandidate getIceServers(int index) {
         if (iceServersBuilder_ == null) {
           return iceServers_.get(index);
         } else {
@@ -5650,7 +5787,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder setIceServers(
-          int index, proto.Proto.IceCandidate value) {
+          int index, IceCandidate value) {
         if (iceServersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5667,7 +5804,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder setIceServers(
-          int index, proto.Proto.IceCandidate.Builder builderForValue) {
+          int index, IceCandidate.Builder builderForValue) {
         if (iceServersBuilder_ == null) {
           ensureIceServersIsMutable();
           iceServers_.set(index, builderForValue.build());
@@ -5680,7 +5817,7 @@ public final class Proto {
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public Builder addIceServers(proto.Proto.IceCandidate value) {
+      public Builder addIceServers(IceCandidate value) {
         if (iceServersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5697,7 +5834,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder addIceServers(
-          int index, proto.Proto.IceCandidate value) {
+          int index, IceCandidate value) {
         if (iceServersBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -5714,7 +5851,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder addIceServers(
-          proto.Proto.IceCandidate.Builder builderForValue) {
+          IceCandidate.Builder builderForValue) {
         if (iceServersBuilder_ == null) {
           ensureIceServersIsMutable();
           iceServers_.add(builderForValue.build());
@@ -5728,7 +5865,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder addIceServers(
-          int index, proto.Proto.IceCandidate.Builder builderForValue) {
+          int index, IceCandidate.Builder builderForValue) {
         if (iceServersBuilder_ == null) {
           ensureIceServersIsMutable();
           iceServers_.add(index, builderForValue.build());
@@ -5742,7 +5879,7 @@ public final class Proto {
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
       public Builder addAllIceServers(
-          java.lang.Iterable<? extends proto.Proto.IceCandidate> values) {
+          Iterable<? extends IceCandidate> values) {
         if (iceServersBuilder_ == null) {
           ensureIceServersIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -5782,14 +5919,14 @@ public final class Proto {
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public proto.Proto.IceCandidate.Builder getIceServersBuilder(
+      public IceCandidate.Builder getIceServersBuilder(
           int index) {
         return getIceServersFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public proto.Proto.IceCandidateOrBuilder getIceServersOrBuilder(
+      public IceCandidateOrBuilder getIceServersOrBuilder(
           int index) {
         if (iceServersBuilder_ == null) {
           return iceServers_.get(index);  } else {
@@ -5799,7 +5936,7 @@ public final class Proto {
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public java.util.List<? extends proto.Proto.IceCandidateOrBuilder> 
+      public java.util.List<? extends IceCandidateOrBuilder>
            getIceServersOrBuilderList() {
         if (iceServersBuilder_ != null) {
           return iceServersBuilder_.getMessageOrBuilderList();
@@ -5810,31 +5947,31 @@ public final class Proto {
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public proto.Proto.IceCandidate.Builder addIceServersBuilder() {
+      public IceCandidate.Builder addIceServersBuilder() {
         return getIceServersFieldBuilder().addBuilder(
-            proto.Proto.IceCandidate.getDefaultInstance());
+            IceCandidate.getDefaultInstance());
       }
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public proto.Proto.IceCandidate.Builder addIceServersBuilder(
+      public IceCandidate.Builder addIceServersBuilder(
           int index) {
         return getIceServersFieldBuilder().addBuilder(
-            index, proto.Proto.IceCandidate.getDefaultInstance());
+            index, IceCandidate.getDefaultInstance());
       }
       /**
        * <code>repeated .proto.IceCandidate ice_servers = 3;</code>
        */
-      public java.util.List<proto.Proto.IceCandidate.Builder> 
+      public java.util.List<IceCandidate.Builder>
            getIceServersBuilderList() {
         return getIceServersFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          proto.Proto.IceCandidate, proto.Proto.IceCandidate.Builder, proto.Proto.IceCandidateOrBuilder> 
+          IceCandidate, IceCandidate.Builder, IceCandidateOrBuilder>
           getIceServersFieldBuilder() {
         if (iceServersBuilder_ == null) {
           iceServersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              proto.Proto.IceCandidate, proto.Proto.IceCandidate.Builder, proto.Proto.IceCandidateOrBuilder>(
+              IceCandidate, IceCandidate.Builder, IceCandidateOrBuilder>(
                   iceServers_,
                   ((bitField0_ & 0x00000004) == 0x00000004),
                   getParentForChildren(),
@@ -5858,12 +5995,12 @@ public final class Proto {
     }
 
     // @@protoc_insertion_point(class_scope:proto.IceServers)
-    private static final proto.Proto.IceServers DEFAULT_INSTANCE;
+    private static final IceServers DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new proto.Proto.IceServers();
+      DEFAULT_INSTANCE = new IceServers();
     }
 
-    public static proto.Proto.IceServers getDefaultInstance() {
+    public static IceServers getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5881,12 +6018,12 @@ public final class Proto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<IceServers> getParserForType() {
       return PARSER;
     }
 
-    public proto.Proto.IceServers getDefaultInstanceForType() {
+    public IceServers getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -5935,7 +6072,7 @@ public final class Proto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    java.lang.String[] descriptorData = {
+    String[] descriptorData = {
       "\n\ndata.proto\022\005proto\"\315\001\n\020MessageContainer" +
       "\0229\n\014message_type\030\001 \001(\0162#.proto.MessageCo" +
       "ntainer.MessageType\022\017\n\007message\030\002 \001(\014\"m\n\013" +
@@ -5948,16 +6085,17 @@ public final class Proto {
       "2&.proto.CallRequestError.ResponseStatus" +
       "\"(\n\016ResponseStatus\022\t\n\005ERROR\020\000\022\013\n\007TIMEOUT" +
       "\020\001\"F\n\004Peer\022\017\n\007call_id\030\001 \001(\t\022\027\n\017local_cli" +
-      "ent_id\030\002 \001(\t\022\024\n\014call_message\030\003 \001(\t\"\223\001\n\007S" +
-      "ession\022\030\n\020remote_client_id\030\001 \001(\t\022\017\n\007call" +
-      "_id\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022)\n\014sessio" +
-      "n_type\030\004 \001(\0162\023.proto.Session.Type\"\035\n\004Typ" +
-      "e\022\t\n\005OFFER\020\000\022\n\n\006ANSWER\020\001\"Z\n\014IceCandidate" +
-      "\022\017\n\007sdp_mid\030\001 \001(\t\022\030\n\020spd_m_line_index\030\002 " +
-      "\001(\005\022\013\n\003sdp\030\003 \001(\t\022\022\n\nserver_url\030\004 \001(\t\"a\n\n" +
-      "IceServers\022\017\n\007call_id\030\001 \001(\t\022\030\n\020remote_cl" +
-      "ient_id\030\002 \001(\t\022(\n\013ice_servers\030\003 \003(\0132\023.pro" +
-      "to.IceCandidateB\007B\005Protob\006proto3"
+      "ent_id\030\002 \001(\t\022\024\n\014call_message\030\003 \001(\t\"\254\001\n\007S" +
+      "ession\022\027\n\017local_client_id\030\001 \001(\t\022\030\n\020remot" +
+      "e_client_id\030\002 \001(\t\022\017\n\007call_id\030\003 \001(\t\022\023\n\013de" +
+      "scription\030\004 \001(\t\022)\n\014session_type\030\005 \001(\0162\023." +
+      "proto.Session.Type\"\035\n\004Type\022\t\n\005OFFER\020\000\022\n\n" +
+      "\006ANSWER\020\001\"Z\n\014IceCandidate\022\017\n\007sdp_mid\030\001 \001" +
+      "(\t\022\030\n\020spd_m_line_index\030\002 \001(\005\022\013\n\003sdp\030\003 \001(" +
+      "\t\022\022\n\nserver_url\030\004 \001(\t\"a\n\nIceServers\022\017\n\007c" +
+      "all_id\030\001 \001(\t\022\030\n\020remote_client_id\030\002 \001(\t\022(" +
+      "\n\013ice_servers\030\003 \003(\0132\023.proto.IceCandidate" +
+      "B\007B\005Protob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5976,43 +6114,43 @@ public final class Proto {
     internal_static_proto_MessageContainer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_MessageContainer_descriptor,
-        new java.lang.String[] { "MessageType", "Message", });
+        new String[] { "MessageType", "Message", });
     internal_static_proto_CallRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_proto_CallRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CallRequest_descriptor,
-        new java.lang.String[] { "CallId", "CallMessage", "LocalClientId", });
+        new String[] { "CallId", "CallMessage", "LocalClientId", });
     internal_static_proto_CallRequestError_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_proto_CallRequestError_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_CallRequestError_descriptor,
-        new java.lang.String[] { "CallId", "Status", });
+        new String[] { "CallId", "Status", });
     internal_static_proto_Peer_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_proto_Peer_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Peer_descriptor,
-        new java.lang.String[] { "CallId", "LocalClientId", "CallMessage", });
+        new String[] { "CallId", "LocalClientId", "CallMessage", });
     internal_static_proto_Session_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_proto_Session_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_Session_descriptor,
-        new java.lang.String[] { "RemoteClientId", "CallId", "Description", "SessionType", });
+        new String[] { "LocalClientId", "RemoteClientId", "CallId", "Description", "SessionType", });
     internal_static_proto_IceCandidate_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_proto_IceCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_IceCandidate_descriptor,
-        new java.lang.String[] { "SdpMid", "SpdMLineIndex", "Sdp", "ServerUrl", });
+        new String[] { "SdpMid", "SpdMLineIndex", "Sdp", "ServerUrl", });
     internal_static_proto_IceServers_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_proto_IceServers_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_IceServers_descriptor,
-        new java.lang.String[] { "CallId", "RemoteClientId", "IceServers", });
+        new String[] { "CallId", "RemoteClientId", "IceServers", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
