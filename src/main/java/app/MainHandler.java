@@ -107,13 +107,14 @@ public class MainHandler extends TextWebSocketHandler {
 
     call.getCallMembers().forEach(CallMember::cancelWaiting);
 
-    System.out.println("Handle Peer");
-
     call.addCallMember(new CallMember(session, peer.getLocalClientId(), peer.getCallId()));
     call.getCallMembers()
         .stream()
         .filter(callMember -> !callMember.getClientId().equals(peer.getLocalClientId()))
-        .forEach(callMember -> sendPeer(callMember.getSession(), peer));
+        .forEach(callMember -> {
+          System.out.println("Peer call Memmber: " + callMember.getClientId());
+          sendPeer(callMember.getSession(), peer);
+        });
   }
 
   private void handleIceServers(IceServers iceServers) {
