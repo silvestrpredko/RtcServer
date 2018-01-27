@@ -123,13 +123,13 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
-    System.out.println("Handle Ice Servers");
-
     CallMember member = call.getCallMembers()
         .stream()
         .filter(callMember -> callMember.getClientId().equals(iceServers.getRemoteClientId()))
         .findFirst()
         .orElseThrow(() -> new RuntimeException("No Peer By this Id"));
+
+    System.out.println("Handle Ice Servers: " + member.getClientId());
 
     sendIceServers(member.getSession(), iceServers);
   }
