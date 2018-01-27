@@ -141,13 +141,14 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
-    System.out.println("Handle Offer");
 
     CallMember member = call.getCallMembers()
         .stream()
         .filter(callMember -> callMember.getClientId().equals(offer.getRemoteClientId()))
         .findFirst()
         .orElseThrow(() -> new RuntimeException("No Peer By this Id"));
+
+    System.out.println("Handle Offer: " + member.getClientId());
 
     sendOffer(member.getSession(), offer);
   }
@@ -159,13 +160,13 @@ public class MainHandler extends TextWebSocketHandler {
       return;
     }
 
-    System.out.println("Handle Answer");
-
     CallMember member = call.getCallMembers()
         .stream()
         .filter(callMember -> callMember.getClientId().equals(answer.getRemoteClientId()))
         .findFirst()
         .orElseThrow(() -> new RuntimeException("No Peer By this Id"));
+
+    System.out.println("Handle Answer: " + member.getClientId());
 
     sendAnswer(member.getSession(), answer);
   }
